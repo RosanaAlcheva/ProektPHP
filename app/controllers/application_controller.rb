@@ -1,10 +1,16 @@
 class ApplicationController < ActionController::Base
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
-  protect_from_forgery with :exception
+  protect_from_forgery with: :exception
 
   def index
     @vinarijas = Vinarija.all
-    render "layouts/index"
+    render "layouts/vinarii"
   end
+
+  def vinarii
+    @vinarijas = Vinarija.all
+    render "layouts/vinarii"
+  end
+
 end
