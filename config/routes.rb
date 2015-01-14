@@ -1,4 +1,34 @@
 Rails.application.routes.draw do
+  get 'detali/index'
+
+  get 'detali/show'
+
+  get 'detali/new'
+
+  get 'detali/edit'
+
+  get 'detali/delete'
+
+  get 'vino/index'
+
+  get 'vino/show'
+
+  get 'vino/new'
+
+  get 'vino/edit'
+
+  get 'vino/delete'
+
+  get 'vinarija/index'
+
+  get 'vinarija/show'
+
+  get 'vinarija/new'
+
+  get 'vinarija/edit'
+
+  get 'vinarija/delete'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

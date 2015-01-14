@@ -61,5 +61,11 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
+<div>
+  <% @vinarijas.each do |vizba| %>
+    <p><%= vizba.ime %></p>
+      <p><%= vizba.grad %></p>
+  <% end %>
+</div>
 </body>
 </html>
