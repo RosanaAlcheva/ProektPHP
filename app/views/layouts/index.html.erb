@@ -8,8 +8,12 @@
 
 </head>
 <body>
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
+<div class="container-fluid">
+
+    <!--navbar-->
+    <div class="row">
+    <nav class="navbar navbar-default">
+    <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -25,10 +29,10 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Винарии<span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
             <% @vinarijas.each do |vizba| %>
-            <li><a href="#"><%= vizba.ime %></a></li>
+            <li><a href="#"><span class="h4"><%= vizba.ime %></span></a></li>
             <li class="divider"></li>
             <% end %>
           </ul>
@@ -38,6 +42,46 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
+  </div>
 
+    <!--slider-->
+    <div class="row">
+  <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item active">
+        <img src="http://gavilanvineyards.com/wp-content/uploads/2011/03/IMG_0431_small1-900x400.jpg" alt="...">
+      </div>
+      <div class="item">
+        <img src="http://static.squarespace.com/static/52df3e8fe4b005a175c926c9/t/52f94451e4b01b0785c4a461/1392067666625/corquebanner.jpg" alt="...">
+      </div>
+      <div class="item">
+        <img src="http://gavilanvineyards.com/wp-content/uploads/2011/03/winery-900x400.jpg" alt="...">
+      </div>
+
+    </div>
+
+    <!-- Controls -->
+    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
+  </div>
+</div>
+
+    <!--text-->
+    <div class="row">
+
+    </div>
+</div>
 </body>
 </html>
