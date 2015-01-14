@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
 
   def index
     @vinarijas = Vinarija.all
-    render "layouts/vinarii"
+    render "layouts/vina"
   end
 
   def vinarii
