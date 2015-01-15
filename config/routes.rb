@@ -1,33 +1,18 @@
 Rails.application.routes.draw do
-  get 'detali/index'
+  get '/' => 'application#index'
 
-  get 'detali/show'
+  #ovie dve ruti ke ni trebaat za da se nasocime kon index stranicite na vinata i sluzenjeto soodvetno
+  get 'vino' => 'vino#index'
+  get 'detali' => 'detali#index'
 
-  get 'detali/new'
+  resources :vinarija
+  get 'vinarija/:id/delete' => 'vinarija#delete', :as => :vinarija_delete
 
-  get 'detali/edit'
+  resources :vino
+  get 'vino/:id/delete' => 'vino#delete', :as => :vino_delete
 
-  get 'detali/delete'
-
-  get 'vino/index'
-
-  get 'vino/show'
-
-  get 'vino/new'
-
-  get 'vino/edit'
-
-  get 'vino/delete'
-
-  get 'vinarija/index'
-
-  get 'vinarija/show'
-
-  get 'vinarija/new'
-
-  get 'vinarija/edit'
-
-  get 'vinarija/delete'
+  resources :detali
+  get 'detali/:id/delete' => 'detali#delete', :as => :detali_delete
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -83,5 +68,5 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-  get '/' => 'application#index'
+
 end

@@ -5,23 +5,26 @@
     <title></title>
 
     <style>
-      body {
-          background-image: url("http://www.jgwines.com/Background-Faint.jpg");
-          background-size: cover;
-      }
-      a:link {
-          color: #FF0000;
-      }
-      a:visited {
-          color: #FF0000;
-      }
-      a:hover {
-          color: #FF0000;
-      }
+        body {
+            background: url(<%= image_path("background.jpg")%>)no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+         a:link {
+            color: #FF0000;
+        }
+        a:visited {
+            color: #FF0000;
+        }
+        a:hover {
+            color: #FF0000;
+        }
 
-      a:active {
-          color: #FF0000;
-      }
+        a:active {
+            color: #FF0000;
+        }
     </style>
 </head>
 <body>
@@ -49,7 +52,7 @@
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class=""></span>Винарии<span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
             <% @vinarijas.each do |vizba| %>
-            <li><a href="#"><span class="h4"><%= vizba.ime %></span></a></li>
+            <li><span class="glyphicon glyphicon-home"></span>&nbsp;<span class="h4"><%= link_to vizba.ime, vizba %></span></li>
             <% end %>
           </ul>
         </li>
@@ -112,7 +115,7 @@
 </div>
 
     <!--text-->
-    <div class="row" style="margin-top: 10px">
+    <div class="row" style="margin: 10px 0px">
          <div class="media text-center" style="color: #1488FF; font-style: italic;font-size: 20px">
            Бидете и Вие дел од искусните македонски гурмани...
         </div>
@@ -121,14 +124,14 @@
   <div id="footer" class="row" style="background-color: #F7F7F7">
     <footer>
       <div class="col-lg-12" style="margin-top: 10px">
-        <div class="col-lg-6">
+        <div class="col-lg-offset-2 col-lg-5">
           <address>
             <p><span class="glyphicon glyphicon-user"></span> Росана Алчева</p>
             <p><span class="glyphicon glyphicon-envelope"></span>: <a href="mailto:alcheva_rosana@yahoo.com">alcheva_rosana@yahoo.com</a></p>
             <p><%= image_tag('/images/fbicon.png') %> <a href="https://www.facebook.com/rosana.alceva" target="_blank">https://www.facebook.com/rosana.alceva</a></p>
           </address>
         </div>
-        <div class="col-lg-6">
+        <div class="col-lg-5">
           <address>
             <p><span class="glyphicon glyphicon-user"></span> Мартин Ристевски</p>
             <p><span class="glyphicon glyphicon-envelope"></span>: <a href="mailto:martin.ristevski04@gmail.com">martin.ristevski04@gmail.com</a></p>
