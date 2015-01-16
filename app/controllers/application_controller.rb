@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   def index
-    @vinarijas = Vinarija.all
+    @vinarijas = Vinarija.all.order('ime ASC')
     render "layouts/index"
   end
 
