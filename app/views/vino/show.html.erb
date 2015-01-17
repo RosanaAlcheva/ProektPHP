@@ -36,6 +36,17 @@
           max-height: 200px;
       }
 
+      .bottle_class{
+          max-width: 450px;
+          max-height: 450px;
+      }
+      @media screen and (max-width: 1200px){
+          .bottle_class{
+              max-width: 200px;
+              max-height: 200px;
+          }
+      }
+
       /*brisenje na liniite megju redovite vo tabelata*/
       .table>tbody>tr>th, .table>tbody>tr>td {
           border-top: none;
@@ -45,7 +56,6 @@
           color:white;
       }
       #vizbi{
-
           font-family: "Trebuchet MS", Helvetica, sans-serif;
           font-size: large;
       }
@@ -106,7 +116,7 @@
     <div class="col-lg-9">
       <div class="row">
         <div class="col-lg-2">
-          <%= image_tag('/images/whiteglass.jpg', :class => 'img-rounded pull-right glass_class') %>
+          <%= image_tag('/images/wine.jpg', :class => 'img-rounded pull-right bottle_class') %>
         </div>
         <div class="col-lg-2">
           <table class="tabe">
@@ -138,7 +148,7 @@
           <div class="row">
             <div class="col-lg-4">
               <div class="thumbnail">
-                <%= image_tag('/images/whiteglass.jpg', :class => 'img-responsive glass_class') %>
+                <%= image_tag('/images/casi/casaBelo.png', :class => 'img-responsive glass_class') %>
                 <div class="caption">
                   <h5>Послужете го во следната чаша со цел да ги ослободите сите ароми кои што може да ги понуди ова вино.</h5>
                 </div>

@@ -31,6 +31,12 @@
           max-width: 350px;
           max-height: 350px
       }
+      @media screen and (max-width: 640px){
+          .bottle_class{
+              max-width: 200px;
+              max-height: 200px;
+          }
+      }
 
       /*brisenje na liniite megju redovite vo tabelata*/
       .table>tbody>tr>th, .table>tbody>tr>td {
@@ -101,13 +107,11 @@
     </div>
     <div class="col-lg-9">
       <div class="row">
-        <!-- promena od 3 na 2 -->
-        <div class="col-lg-offset-1 col-lg-2">
-          <!--kreirav klasa nasa bottle_class za da moze da se vcita slika na ovoj nacin koj e edinstven i raboti za rails :D
-                sekogas ako stavas slika na koja mu zadavas tvoj stil napravi klasa i definiraj ja kako jas sto napraviv-->
-          <%= image_tag('/images/wine.jpg', :class => 'img-rounded bottle_class') %>
+        <div class="col-lg-2">
+          <!-- DODAJ TUKA @VINARIJA.SLIKA -->
+          <%= image_tag('/images/logos/skovin.png', :class => 'img-responsive img-rounded bottle_class') %>
         </div>
-        <div class="col-lg-offset-1 col-lg-7">
+        <div class="col-lg-offset-3 col-lg-7">
           <table class="table">
             <tbody>
             <tr>
