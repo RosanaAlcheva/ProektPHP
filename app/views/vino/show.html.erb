@@ -29,7 +29,11 @@
 
       .glass_class{
           max-width: 300px;
-          max-height: 300px
+          max-height: 200px;
+      }
+      .therm_class{
+          max-width: 300px;
+          max-height: 200px;
       }
 
       /*brisenje na liniite megju redovite vo tabelata*/
@@ -51,6 +55,7 @@
       #vizbi:active{
           color:#B00100;
       }
+
   </style>
 </head>
 <body>
@@ -93,18 +98,18 @@
   <div class="row">
     <div class="col-lg-3">
       <div class="list-group">
-        <% @vinos.each do |v| %>
-            <%= link_to raw("<span class='pull-left glyphicon glyphicon-home' aria-hidden='true'></span><span class='h4'>&nbsp"+v.ime+"</span><span class='pull-right glyphicon glyphicon-share-alt' aria-hidden='true'></span>"), v, :class => 'list-group-item' %>
+        <% @vinos.each do |vino| %>
+            <%= link_to raw("<span class='pull-left glyphicon glyphicon-tint' aria-hidden='true'></span><span class='h4'>&nbsp"+vino.ime+"</span><span class='pull-right glyphicon glyphicon-share-alt' aria-hidden='true'></span>"), vino_path(vino, :query => @vinarija.ime), :class => 'list-group-item' %>
         <% end %>
       </div>
     </div>
     <div class="col-lg-9">
       <div class="row">
-        <div class="col-lg-offset-1 col-lg-4">
+        <div class="col-lg-2">
           <%= image_tag('/images/whiteglass.jpg', :class => 'img-rounded pull-right glass_class') %>
         </div>
-        <div class="col-lg-7">
-          <table class="table">
+        <div class="col-lg-2">
+          <table class="tabe">
             <tbody>
             <tr>
               <td><h4>Име: </h4></td>
@@ -126,12 +131,41 @@
               <td><h4>Тип: </h4></td>
               <td><%= @vino.tip%></td>
             </tr>
-            <tr>
-              <!--ovde link do detali kontrolerot?? -->
-
-            </tr>
             </tbody>
           </table>
+        </div>
+        <div class="col-lg-offset-1 col-lg-6">
+          <div class="row">
+            <div class="col-lg-4">
+              <div class="thumbnail">
+                <%= image_tag('/images/whiteglass.jpg', :class => 'img-responsive glass_class') %>
+                <div class="caption">
+                  <h5>Послужете го во следната чаша со цел да ги ослободите сите ароми кои што може да ги понуди ова вино.</h5>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="thumbnail">
+                <%= image_tag('/images/thermometer.png', :class => 'img-responsive therm_class') %>
+                <div class="caption">
+                  <!--tuka temp max i min -->
+                  <h3><%= %> - <%= %> &deg;C</h3>
+                 </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="thumbnail">
+                <!--start na EACH-->
+                <!--lista od sliki povrzani so toa vino-->
+                <%= image_tag('/images/hrana/cheese.jpg', :class => 'img-responsive') %>
+                <div class="caption">
+                  <!--ovde lista od iminja na sekoja hrana-->
+                  <h3><%= %>sirenje :P</h3>
+                 </div>
+                <!--kraj na EACH-->
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
