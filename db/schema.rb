@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(version: 20150114175424) do
   create_table "hranas", force: true do |t|
     t.string   "ime"
     t.string   "slika"
+    t.integer  "sluzenje_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -29,7 +30,6 @@ ActiveRecord::Schema.define(version: 20150114175424) do
     t.integer  "temperatura_max"
     t.integer  "temperatura_min"
     t.string   "slika_chasa"
-    t.integer  "hrana_id"
     t.integer  "vino_id"
     t.datetime "created_at"
     t.datetime "updated_at"
