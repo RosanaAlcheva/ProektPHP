@@ -7,6 +7,7 @@ class CreateVinos < ActiveRecord::Migration
       t.string :tip
       t.string :sorta
       t.string :boja
+      t.string :slika
       t.references :vinarija
       t.timestamps
     end
