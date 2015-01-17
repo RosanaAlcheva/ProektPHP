@@ -65,7 +65,7 @@
           <a id="vizbi" name="vizbi" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Винарии<span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
             <% @vinarijas.each do |vinarija| %>
-            <li><span class="glyphicon glyphicon-home"></span>&nbsp;<span class="h4"><%= link_to vinarija.ime, vinarija_path(vinarija, :query => vinarija.ime), :id => "#{vinarija.ime}", :name => "#{vinarija.ime}", :onclick => "chgName('#{vinarija.ime}')" %></span><span class="glyphicon glyphicon-share-alt pull-right"></span></li>
+            <li><span class="glyphicon glyphicon-home"></span>&nbsp;<span class="h4"><%= link_to vinarija.ime, vinarija_path(vinarija, :query => vinarija.ime), :id => "#{vinarija.ime}", :name => "#{vinarija.ime}", :onclick => "chgName('#{vinarija.ime}')" %></span></li>
                 <li class="divider"></li>
             <% end %>
           </ul>
