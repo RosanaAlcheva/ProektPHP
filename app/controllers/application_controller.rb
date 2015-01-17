@@ -8,9 +8,4 @@ class ApplicationController < ActionController::Base
     render "layouts/index"
   end
 
- # def vinarii
-  #  @vinarijas = Vinarija.all
-   # render "layouts/vinarii"
-  #end
-
 end

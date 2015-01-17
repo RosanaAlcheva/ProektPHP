@@ -5,27 +5,40 @@
     <title></title>
 
     <style>
-        body {
-            background: url(<%= image_path("background.jpg")%>)no-repeat center center fixed;
-            -webkit-background-size: cover;
-            -moz-background-size: cover;
-            -o-background-size: cover;
-            background-size: cover;
-        }
-         a:link {
-            color: #FF0000;
-        }
-        a:visited {
-            color: #FF0000;
-        }
-        a:hover {
-            color: #FF0000;
-        }
+            body {
+                background: url(<%= image_path("background.jpg")%>)no-repeat center center fixed;
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: cover;
+            }
+             a:link {
+                color: #FF0000;
+            }
+            a:visited {
+                color: #FF0000;
+            }
+            a:hover {
+                color: #FF0000;
+            }
 
-        a:active {
-            color: #FF0000;
-        }
+            a:active {
+                color: #FF0000;
+            }
+
+            #vizbi{
+
+                font-family: "Trebuchet MS", Helvetica, sans-serif;
+                font-size: large;
+            }
+            #vizbi:hover{
+                color:#1488FF;
+            }
+            #vizbi:active{
+                color:#B00100;
+            }
     </style>
+
 </head>
 <body>
 <div class="container-fluid">
@@ -49,10 +62,11 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class=""></span>Винарии<span class="caret"></span></a>
+          <a id="vizbi" name="vizbi" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Винарии<span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
-            <% @vinarijas.each do |vizba| %>
-            <li><span class="glyphicon glyphicon-home"></span>&nbsp;<span class="h4"><%= link_to vizba.ime, vizba %></span></li>
+            <% @vinarijas.each do |vinarija| %>
+            <li><span class="glyphicon glyphicon-home"></span>&nbsp;<span class="h4"><%= link_to vinarija.ime, vinarija_path(vinarija, :query => vinarija.ime), :id => "#{vinarija.ime}", :name => "#{vinarija.ime}", :onclick => "chgName('#{vinarija.ime}')" %></span><span class="glyphicon glyphicon-share-alt pull-right"></span></li>
+                <li class="divider"></li>
             <% end %>
           </ul>
         </li>
@@ -144,5 +158,13 @@
   </div>
 
 </div>
+
+
+<script type="text/javascript">
+  function chgName(ime) {
+      var selectedWinary = document.getElementById(ime).innerHTML;
+      document.getElementById("vizbi").innerHTML = selectedWinary+"<span class='caret'></span>";
+  }
+</script>
 </body>
 </html>

@@ -4,7 +4,9 @@ class VinoController < ApplicationController
   end
 
   def show
-    @vinos = Vino.all
+    @vinarijas = Vinarija.all.order('ime ASC')
+    @vinarija=Vinarija.find_by_ime(params[:query])
+    @vinos = @vinarija.vinos
     @vino = Vino.find(params[:id])
   end
 

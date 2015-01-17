@@ -6,6 +6,9 @@ class VinarijaController < ApplicationController
   def show
     @vinarija = Vinarija.find(params[:id])
     @vinarijas = Vinarija.all.order('ime ASC')
+
+    #get all the wines related to that winary
+    @vinos = @vinarija.vinos
   end
 
   def new
