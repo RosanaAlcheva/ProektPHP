@@ -4,6 +4,7 @@ class CreateHranas < ActiveRecord::Migration
       #t.integer :id IMPLICITNO SE DODAVA
       t.string :ime
       t.string :slika
+      t.references :sluzenje
       t.timestamps
     end
   end

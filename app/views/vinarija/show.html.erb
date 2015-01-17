@@ -108,8 +108,7 @@
     <div class="col-lg-9">
       <div class="row">
         <div class="col-lg-2">
-          <!-- DODAJ TUKA @VINARIJA.SLIKA -->
-          <%= image_tag('/images/logos/skovin.png', :class => 'img-responsive img-rounded bottle_class') %>
+          <%= image_tag("/images/logos/#{@vinarija.slika}", :class => 'img-responsive img-rounded bottle_class') %>
         </div>
         <div class="col-lg-offset-3 col-lg-7">
           <table class="table">
@@ -132,7 +131,7 @@
             </tr>
             <tr>
               <td><h4>Web страна: </h4></td>
-              <td><a href=""><%= @vinarija.veb_strana %></a></td>
+              <td><%= link_to @vinarija.veb_strana ,"#{@vinarija.veb_strana}", :target => "_blank"%></td>
             </tr>
             <tr>
               <td><h4>Повеќе за винаријата: </h4></td>
