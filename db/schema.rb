@@ -53,6 +53,7 @@ ActiveRecord::Schema.define(version: 20150114175424) do
     t.string   "tip"
     t.string   "sorta"
     t.string   "boja"
+    t.string   "slika"
     t.integer  "vinarija_id"
     t.datetime "created_at"
     t.datetime "updated_at"

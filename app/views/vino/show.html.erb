@@ -28,19 +28,19 @@
       }
 
       .glass_class{
-          max-width: 300px;
-          max-height: 200px;
+          max-width: 350px;
+          max-height: 450px;
       }
       .therm_class{
-          max-width: 300px;
-          max-height: 200px;
+          max-width: 275px;
+          max-height: 175px;
       }
 
       .bottle_class{
           max-width: 450px;
           max-height: 450px;
       }
-      @media screen and (max-width: 1200px){
+      @media screen and (max-width: 1170px){
           .bottle_class{
               max-width: 200px;
               max-height: 200px;
@@ -93,7 +93,7 @@
               <a id="vizbi" name="vizbi" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class=""></span>Винарии<span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
                 <% @vinarijas.each do |vinarija| %>
-                    <li><span class="glyphicon glyphicon-home"></span>&nbsp;<span class="h4"><%= link_to vinarija.ime, vinarija_path(vinarija, :query => vinarija.ime), :id => "#{vinarija.ime}", :name => "#{vinarija.ime}", :onclick => "chgName('#{vinarija.ime}')" %></span><span class="glyphicon glyphicon-share-alt pull-right"></span></li>
+                    <li><span class="glyphicon glyphicon-home"></span>&nbsp;<span class="h4"><%= link_to vinarija.ime, vinarija_path(vinarija, :query => vinarija.ime), :id => "#{vinarija.ime}", :name => "#{vinarija.ime}", :onclick => "chgName('#{vinarija.ime}')" %></span></li>
                     <li class="divider"></li>
                 <% end %>
               </ul>
@@ -119,60 +119,58 @@
           <%= image_tag('/images/vina/wine.jpg', :class => 'img-rounded pull-right bottle_class') %>
         </div>
         <div class="col-lg-2">
-          <table class="tabe">
+          <table class="table">
             <tbody>
             <tr>
               <td><h4>Име: </h4></td>
-              <td><%= @vino.ime %></td>
+              <td><h4><b><%= @vino.ime %></b></h4></td>
             </tr>
             <tr>
               <td><h4>Сорта: </h4></td>
-              <td><%= @vino.sorta%></td>
+              <td><h4><b><%= @vino.sorta %></b></h4></td>
             </tr>
             <tr>
               <td><h4>Боја: </h4></td>
-              <td><%= @vino.boja%></td>
+              <td><h4><b><%= @vino.boja %></b></h4></td>
             </tr>
             <tr>
               <td><h4>Вид: </h4></td>
-              <td><%= @vino.vid%></td>
+              <td><h4><b><%= @vino.vid %></b></h4></td>
             </tr>
             <tr>
               <td><h4>Тип: </h4></td>
-              <td><%= @vino.tip%></td>
+              <td><h4><b><%= @vino.tip %></b></h4></td>
             </tr>
             </tbody>
           </table>
         </div>
-        <div class="col-lg-offset-1 col-lg-6">
+        <div class="col-lg-offset-1 col-lg-7">
           <div class="row">
-            <div class="col-lg-4">
+            <div class="col-lg-5">
               <div class="thumbnail">
-                <%= image_tag('/images/casi/casaBelo.png', :class => 'img-responsive glass_class') %>
-                <div class="caption">
-                  <h5>Послужете го во следната чаша со цел да ги ослободите сите ароми кои што може да ги понуди ова вино.</h5>
+                <%= image_tag("/images/casi/#{@detali.slika_chasa}", :class => 'img-responsive glass_class') %>
+                <div class="caption text-left">
+                  <span class="h5">Послужете го во следната чаша со цел да ги ослободите сите ароми кои што може да ги понуди ова вино.</span>
                 </div>
               </div>
             </div>
-            <div class="col-lg-4">
+            <div class="col-lg-3">
               <div class="thumbnail">
                 <%= image_tag('/images/thermometer.png', :class => 'img-responsive therm_class') %>
-                <div class="caption">
+                <div class="caption text-center">
                   <!--tuka temp max i min -->
-                  <h3><%= @detali.temperatura_min %> - <%= @detali.temperatura_max %> &deg;C</h3>
+                  <h4><%= @detali.temperatura_min %> - <%= @detali.temperatura_max %> &deg;C</h4>
                  </div>
               </div>
             </div>
             <div class="col-lg-4">
-              <div class="thumbnail">
+              <div class="thumbnail text-center">
                 <%@hranas.each do |hrana|%>
-                <!--lista od sliki povrzani so toa vino-->
-                <%= image_tag("/images/hrana/#{hrana.slika}", :class => 'img-responsive') %>
-                <div class="caption">
-                  <!--ovde lista od iminja na sekoja hrana-->
-                  <h3><%= hrana.ime %></h3>
-                 </div>
-                    <%end%>
+                    <%= image_tag("/images/hrana/#{hrana.slika}", :class => 'img-responsive pull-left', :style => 'margin-left: 15px') %>
+                    <div class="caption" style="font-size: larger">
+                      <%= hrana.ime %>
+                    </div>
+                <%end%>
               </div>
             </div>
           </div>

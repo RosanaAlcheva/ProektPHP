@@ -31,7 +31,7 @@
           max-width: 350px;
           max-height: 350px
       }
-      @media screen and (max-width: 640px){
+      @media screen and (max-width: 750px){
           .bottle_class{
               max-width: 200px;
               max-height: 200px;
@@ -85,7 +85,7 @@
               <a id="vizbi" name="vizbi" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class=""></span>Винарии<span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
                 <% @vinarijas.each do |vinarija| %>
-                    <li><span class="glyphicon glyphicon-home"></span>&nbsp;<span class="h4"><%= link_to vinarija.ime, vinarija_path(vinarija, :query => vinarija.ime), :id => "#{vinarija.ime}", :name => "#{vinarija.ime}", :onclick => "chgName('#{vinarija.ime}')" %></span><span class="glyphicon glyphicon-share-alt pull-right"></span></li>
+                    <li><span class="glyphicon glyphicon-home"></span>&nbsp;<span class="h4"><%= link_to vinarija.ime, vinarija_path(vinarija, :query => vinarija.ime), :id => "#{vinarija.ime}", :name => "#{vinarija.ime}", :onclick => "chgName('#{vinarija.ime}')" %></span></li>
                     <li class="divider"></li>
                 <% end %>
               </ul>
@@ -115,32 +115,35 @@
             <tbody>
             <tr>
               <td><h4>Име: </h4></td>
-              <td><%= @vinarija.ime %></td>
+              <td><h4><b><%= @vinarija.ime %></b></h4></td>
             </tr>
             <tr>
               <td><h4>Град: </h4></td>
-              <td><%= @vinarija.grad %></td>
+              <td><h4><b><%= @vinarija.grad %></b></h4></td>
             </tr>
             <tr>
               <td><h4>Година на основање: </h4></td>
-              <td><%= @vinarija.godina %></td>
+              <td><h4><b><%= @vinarija.godina %></b></h4></td>
             </tr>
             <tr>
               <td><h4>Регион на плантажи: </h4></td>
-              <td><%= @vinarija.region %></td>
+              <td><h4><b><%= @vinarija.region %></b></h4></td>
             </tr>
             <tr>
               <td><h4>Web страна: </h4></td>
-              <td><%= link_to @vinarija.veb_strana ,"#{@vinarija.veb_strana}", :target => "_blank"%></td>
+              <td><h4><b><%= link_to @vinarija.veb_strana ,"#{@vinarija.veb_strana}", :target => "_blank"%></b></h4></td>
             </tr>
             <tr>
               <td><h4>Повеќе за винаријата: </h4></td>
-              <td><p><%= @vinarija.opis %></p></td>
+              <td><h4><p><b><%= @vinarija.opis %></b></p></h4></td>
             </tr>
             <tr>
-              <!--tuka ke treba linkot da se kreira preku link_to
-              <td colspan="2" style="text-align: left"><h4></h4></td>
-                -->
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
             </tr>
             </tbody>
           </table>
