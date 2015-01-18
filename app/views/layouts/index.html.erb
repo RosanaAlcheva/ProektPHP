@@ -13,17 +13,17 @@
                 background-size: cover;
             }
              a:link {
-                color: #FF0000;
+                color: #CC0000;
             }
             a:visited {
-                color: #FF0000;
+                color: #CC0000;
             }
             a:hover {
-                color: #FF0000;
+                color: #CC0000;
             }
 
             a:active {
-                color: #FF0000;
+                color: #CC0000;
             }
 
             #vizbi{
@@ -33,9 +33,6 @@
             }
             #vizbi:hover{
                 color:#1488FF;
-            }
-            #vizbi:active{
-                color:#B00100;
             }
     </style>
 
@@ -73,7 +70,7 @@
       </ul>
       <form class="navbar-form navbar-right" role="search">
         <div class="input-group">
-          <input type="text" class="form-control" placeholder="Пребарај">
+          <input type="text" class="form-control" placeholder="Пребарај вино...">
             <span class="input-group-btn">
               <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
             </span>
@@ -172,6 +169,7 @@
   function chgName(ime) {
       var selectedWinary = document.getElementById(ime).innerHTML;
       document.getElementById("vizbi").innerHTML = selectedWinary+"<span class='caret'></span>";
+      document.getElementById("vizbi").style.color="#CC0000";
   }
 </script>
 </body>

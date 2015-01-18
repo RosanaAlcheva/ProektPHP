@@ -14,17 +14,17 @@
           background-size: cover;
       }
       a:link {
-          color: #FF0000;
+          color: #CC0000;
       }
       a:visited {
-          color: #FF0000;
+          color: #CC0000;
       }
       a:hover {
-          color: #FF0000;
+          color: #CC0000;
       }
 
       a:active {
-          color: #FF0000;
+          color: #CC0000;
       }
 
       .bottle_class{
@@ -47,15 +47,11 @@
           color:white;
       }
       #vizbi{
-
           font-family: "Trebuchet MS", Helvetica, sans-serif;
           font-size: large;
       }
       #vizbi:hover{
           color:#1488FF;
-      }
-      #vizbi:active{
-          color:#B00100;
       }
   </style>
 
@@ -181,6 +177,7 @@
     function chgName(ime) {
         var selectedWinary = document.getElementById(ime).innerHTML;
         document.getElementById("vizbi").innerHTML = selectedWinary+"<span class='caret'></span>";
+
     }
 
     function getParameterByName(name) {
@@ -191,6 +188,7 @@
     }
     var ime_vinarija=getParameterByName('query');
     document.getElementById('vizbi').innerHTML=ime_vinarija+"<span class='caret'></span>";
+    document.getElementById("vizbi").style.color="#CC0000";
 </script>
 </body>
 </html>
