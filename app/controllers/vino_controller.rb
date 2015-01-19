@@ -15,6 +15,7 @@ class VinoController < ApplicationController
     @allhranas.each do |h|
       @hranas.push(h) if h.sluzenje_id == @detali.id
     end
+
   end
 
   def new

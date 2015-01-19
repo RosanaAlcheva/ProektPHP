@@ -1,10 +1,6 @@
 Rails.application.routes.draw do
   get '/' => 'application#index'
-
-  #ovie dve ruti ke ni trebaat za da se nasocime kon index stranicite na vinata i sluzenjeto soodvetno
-  #get 'vino' => 'vino#index'
-  #get 'detali' => 'detali#index'
-
+  get 'admin' => 'application#admin'
   resources :vinarija
   get 'vinarija/:id/delete' => 'vinarija#delete', :as => :vinarija_delete
 

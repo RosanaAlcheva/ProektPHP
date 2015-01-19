@@ -6,62 +6,65 @@
   <title></title>
 
   <style>
-      body {
-          background: url(<%= image_path("background.jpg")%>)no-repeat center center fixed;
-          -webkit-background-size: cover;
-          -moz-background-size: cover;
-          -o-background-size: cover;
-          background-size: cover;
-      }
-      a:link {
-          color: #CC0000;
-      }
-      a:visited {
-          color: #CC0000;
-      }
-      a:hover {
-          color: #CC0000;
-      }
-
-      a:active {
-          color: #CC0000;
-      }
-
-      .glass_class{
-          max-width: 350px;
-          max-height: 450px;
-      }
-      .therm_class{
-          max-width: 275px;
-          max-height: 175px;
-      }
-
-      .bottle_class{
-          max-width: 450px;
-          max-height: 450px;
-      }
-      @media screen and (max-width: 1170px){
-          .bottle_class{
-              max-width: 200px;
-              max-height: 200px;
+          body {
+              background: url(<%= image_path("background.jpg")%>)no-repeat center center fixed;
+              -webkit-background-size: cover;
+              -moz-background-size: cover;
+              -o-background-size: cover;
+              background-size: cover;
           }
-      }
+          a:link {
+              color: #CC0000;
+          }
+          a:visited {
+              color: #CC0000;
+          }
+          a:hover {
+              color: #CC0000;
+          }
 
-      /*brisenje na liniite megju redovite vo tabelata*/
-      .table>tbody>tr>th, .table>tbody>tr>td {
-          border-top: none;
-      }
-      /*sluzi za kopceto*/
-      a.btn, a.btn-danger{
-          color:white;
-      }
-      #vizbi{
-          font-family: "Trebuchet MS", Helvetica, sans-serif;
-          font-size: large;
-      }
-      #vizbi:hover{
-          color:#1488FF;
-      }
+          a:active {
+              color: #CC0000;
+          }
+
+          .glass_class{
+              max-width: 350px;
+              max-height: 450px;
+          }
+          .therm_class{
+              max-width: 275px;
+              max-height: 175px;
+          }
+
+          .bottle_class{
+              max-width: 450px;
+              max-height: 450px;
+          }
+          @media screen and (max-width: 1170px){
+              .bottle_class{
+                  max-width: 200px;
+                  max-height: 200px;
+              }
+          }
+
+          /*brisenje na liniite megju redovite vo tabelata*/
+          .table>tbody>tr>th, .table>tbody>tr>td {
+              border-top: none;
+          }
+          /*sluzi za kopceto*/
+          a.btn, a.btn-danger{
+              color:white;
+          }
+          #vizbi{
+              font-family: "Trebuchet MS", Helvetica, sans-serif;
+              font-size: large;
+          }
+          #vizbi:hover{
+              color:#1488FF;
+          }
+          #karak{
+              color: #CC0000;
+          }
   </style>
 </head>
 <body>
@@ -114,33 +117,49 @@
         <div class="col-lg-2">
           <%= image_tag('/images/vina/wine.jpg', :class => 'img-rounded pull-right bottle_class') %>
         </div>
-        <div class="col-lg-2">
-          <table class="table">
-            <tbody>
-            <tr>
-              <td><h4>Име: </h4></td>
-              <td><h4><b><%= @vino.ime %></b></h4></td>
-            </tr>
-            <tr>
-              <td><h4>Сорта: </h4></td>
-              <td><h4><b><%= @vino.sorta %></b></h4></td>
-            </tr>
-            <tr>
-              <td><h4>Боја: </h4></td>
-              <td><h4><b><%= @vino.boja %></b></h4></td>
-            </tr>
-            <tr>
-              <td><h4>Вид: </h4></td>
-              <td><h4><b><%= @vino.vid %></b></h4></td>
-            </tr>
-            <tr>
-              <td><h4>Тип: </h4></td>
-              <td><h4><b><%= @vino.tip %></b></h4></td>
-            </tr>
-            </tbody>
-          </table>
+        <div class="col-lg-3">
+          <div class="col-lg-12">
+          <div class="panel panel-info">
+            <div class="panel-heading">
+              <h3 class="panel-title">Карактеристики:</h3>
+            </div>
+            <div class="panel-body">
+              <span style="font-size: larger;">Име:&nbsp;</span><span id="karak" class="h4"><%= @vino.ime %></span><br/><br/>
+              <span style="font-size: larger;">Сорта:&nbsp;</span><span id="karak" class="h4"><%= @vino.sorta %></span><br/><br/>
+              <span style="font-size: larger;">Боја:&nbsp;</span><span id="karak" class="h4"><%= @vino.boja %></span><br/><br/>
+              <span style="font-size: larger;">Вид:&nbsp;</span><span id="karak" class="h4"><%= @vino.vid %></span><br/><br/>
+              <span style="font-size: larger;">Тип:&nbsp;</span><span id="karak" class="h4"><%= @vino.tip %></span>
+            </div>
+          </div>
         </div>
-        <div class="col-lg-offset-1 col-lg-7">
+
+          <!--<table class="table">
+  <tbody>
+  <tr>
+    <td><h4>Име: </h4></td>
+    <td><h4><b></b></h4></td>
+  </tr>
+  <tr>
+    <td><h4>Сорта: </h4></td>
+    <td><h4><b></b></h4></td>
+  </tr>
+  <tr>
+    <td><h4>Боја: </h4></td>
+    <td><h4><b></b></h4></td>
+  </tr>
+  <tr>
+    <td><h4>Вид: </h4></td>
+    <td><h4><b></b></h4></td>
+  </tr>
+  <tr>
+    <td><h4>Тип: </h4></td>
+    <td><h4><b></b></h4></td>
+  </tr>
+  </tbody>
+</table>-->
+
+        </div>
+        <div class="col-lg-7">
           <div class="row">
             <div class="col-lg-5">
               <div class="thumbnail">

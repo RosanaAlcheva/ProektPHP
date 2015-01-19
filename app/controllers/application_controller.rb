@@ -8,4 +8,11 @@ class ApplicationController < ActionController::Base
     render "layouts/index"
   end
 
+  def admin
+    @vinarijas = Vinarija.all.order('ime ASC')
+    @vinos = Vino.all.order('ime ASC')
+    @vino = Vino.find_by_ime('Vranec')
+    render "layouts/admin"
+  end
+
 end

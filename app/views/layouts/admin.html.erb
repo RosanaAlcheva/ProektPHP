@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title></title>
+
+  <style>
+      body {
+          background: url(<%= image_path("background.jpg")%>)no-repeat center center fixed;
+          -webkit-background-size: cover;
+          -moz-background-size: cover;
+          -o-background-size: cover;
+          background-size: cover;
+      }
+  </style>
+
+</head>
+<body>
+<div class="container-fluid">
+
+  <!--navbar-->
+  <div class="row">
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <%= link_to image_tag("logo7.png", :class => 'img-responsive'), "/" %>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li class="dropdown">
+              <a id="vizbi" name="vizbi" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Винарии<span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <% @vinarijas.each do |vinarija| %>
+                    <li><span class="glyphicon glyphicon-home"></span>&nbsp;<span class="h4"><%= link_to vinarija.ime, vinarija_path(vinarija, :query => vinarija.ime), :id => "#{vinarija.ime}", :name => "#{vinarija.ime}" %></span></li>
+                    <li class="divider"></li>
+                <% end %>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a name="vizbi" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Вина<span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <% @vinos.each do |vino| %>
+                    <li><span class="glyphicon glyphicon-home"></span>&nbsp;<span class="h4"><%= link_to vino.ime, vino_path(vino, :query => vino.ime), :id => "#{vino.ime}", :name => "#{vino.ime}" %></span></li>
+                    <li class="divider"></li>
+                <% end %>
+              </ul>
+            </li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+  </div>
+
+
+
+  <div class="row">
+     <div class="col-lg-offset-1 col-lg-2 text-center">
+        <%= link_to "Додади винaрија", "#", :class => 'btn btn-primary' %>
+     </div>
+     <div class="col-lg-offset-1 col-lg-2 text-center">
+       <%= link_to "Додади винo", "#", :class => 'btn btn-primary' %>
+     </div>
+    <div class="col-lg-12">
+      <br/>
+      <div class="col-lg-offset-2 col-lg-3">
+        <div class="form-group">
+          <%= form_for(@vino) do |f| %>
+              <div>
+                <span class="lead">Име:&nbsp;</span>
+                <%= f.text_field :ime, :class => 'form-control'%>
+              </div>
+              <div>
+                Вид:&nbsp;
+                <%= f.text_field :vid, :class => 'form-control' %>
+              </div>
+              <div>
+                Тип:&nbsp;
+                <%= f.text_field :tip, :class => 'form-control' %>
+              </div>
+              <div>
+                Сорта:&nbsp;
+                <%= f.text_field :sorta, :class => 'form-control' %>
+              </div>
+              <div>
+                Боја:&nbsp;
+                <%= f.text_field :boja, :class => 'form-control'%>
+              </div>
+              <div>
+                Слика:&nbsp;
+                <%= f.text_field :slika, :class => 'form-control' %>
+              </div>
+              <div>
+                Винарија:&nbsp;
+                <%= f.collection_select(:ime, @vinarijas, :id, :ime)%>
+              </div>
+              <div class="actions">
+                <%= f.submit %>
+              </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
