@@ -1,14 +1,16 @@
 Rails.application.routes.draw do
   get '/' => 'application#index'
-  get 'admin' => 'application#admin'
-  resources :vinarija
-  get 'vinarija/:id/delete' => 'vinarija#delete', :as => :vinarija_delete
 
-  resources :vino
-  get 'vino/:id/delete' => 'vino#delete', :as => :vino_delete
+  get 'admin' => 'administrator#index'
 
-  resources :detali
-  get 'detali/:id/delete' => 'detali#delete', :as => :detali_delete
+  resources :vinarijas
+  get 'vinarijas/:id/delete' => 'vinarijas#delete', :as => :vinarija_delete
+
+  resources :vinos
+  get 'vinos/:id/delete' => 'vinos#delete', :as => :vino_delete
+
+  resources :detalis
+  get 'detalis/:id/delete' => 'detalis#delete', :as => :detali_delete
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

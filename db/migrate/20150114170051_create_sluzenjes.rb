@@ -5,7 +5,7 @@ class CreateSluzenjes < ActiveRecord::Migration
       t.integer :temperatura_min
       t.string :slika_chasa
       #t.references :hrana
-      t.references :vino
+      t.references :vinos
       t.timestamps
     end
   end

@@ -1,0 +1,35 @@
+<%= form_for(@vino) do |f| %>
+    <div id="red">
+      Име:&nbsp;
+      <%= f.text_field :ime, :class => 'form-control'%>
+    </div>
+    <div id="red">
+      Вид:&nbsp;
+      <%= f.text_field :vid, :class => 'form-control' %>
+    </div>
+    <div id="red">
+      Тип:&nbsp;
+      <%= f.text_field :tip, :class => 'form-control' %>
+    </div>
+    <div id="red">
+      Сорта:&nbsp;
+      <%= f.text_field :sorta, :class => 'form-control' %>
+    </div>
+    <div id="red">
+      Боја:&nbsp;
+      <%= f.text_field :boja, :class => 'form-control'%>
+    </div>
+    <div id="red">
+      Слика:&nbsp;
+      <%= f.text_field :slika, :class => 'form-control' %>
+    </div>
+    <div id="red">
+      Винарија:&nbsp;
+      <%= f.collection_select(:vinarija_id, @vinarii, :id, :ime)%>
+    </div>
+    <div class="actions">
+      <%= button_tag(:type => 'submit', :class => 'btn btn-primary pull-right') do %>
+          <span class="glyphicon glyphicon-plus"></span> Add
+      <% end %>
+    </div>
+<% end %>

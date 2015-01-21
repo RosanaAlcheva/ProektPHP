@@ -12,9 +12,9 @@
           -o-background-size: cover;
           background-size: cover;
       }
-          #red{
-                margin: 10px;
-          }
+      #red{
+          margin: 10px;
+      }
   </style>
 
 </head>
@@ -43,7 +43,7 @@
               <a id="vizbi" name="vizbi" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Винарии<span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
                 <% @vinarijas.each do |vinarija| %>
-                    <li><span class="glyphicon glyphicon-home"></span>&nbsp;<span class="h4"><%= link_to vinarija.ime, "/admin/vinarijas/#{vinarija.id}/edit" %></span></li>
+                    <li><span class="glyphicon glyphicon-home"></span>&nbsp;<span class="h4"><%= link_to vinarija.ime, edit_vinarija_path(vinarija.id), :id => "#{vinarija.ime}", :name => "#{vinarija.ime}" %></span></li>
                     <li class="divider"></li>
                 <% end %>
               </ul>
@@ -66,15 +66,16 @@
 
 
   <div class="row">
-    <div class="col-lg-12" style="left:20%">
-     <div class="col-lg-offset-1 col-lg-2 text-center">
-        <%= link_to "Додади винaрија", "#", :class => 'btn btn-primary' %>
-     </div>
-     <div class="col-lg-offset-1 col-lg-2 text-center">
-       <%= link_to "Додади винo", "#", :class => 'btn btn-primary' %>
-     </div>
+    <div class="clearfix col-lg-12 text-center" style="left:20%">
+      <div class="col-lg-offset-1 col-lg-2">
+        <%= link_to "Додади винaрија", new_vinarija_path, :class => 'btn btn-primary' %>
+      </div>
+      <div class="col-lg-offset-1 col-lg-2">
+        <%= link_to "Додади винo", new_vino_path, :class => 'btn btn-primary' %>
+      </div>
     </div>
   </div>
+
 </div>
 </body>
 </html>

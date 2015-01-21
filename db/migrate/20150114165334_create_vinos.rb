@@ -8,7 +8,7 @@ class CreateVinos < ActiveRecord::Migration
       t.string :sorta
       t.string :boja
       t.string :slika
-      t.references :vinarija
+      t.references :vinarijas
       t.timestamps
     end
   end

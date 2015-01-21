@@ -1,0 +1,37 @@
+<%= form_for(@vino) do |f| %>
+    <div id="red">
+      Име:&nbsp;
+      <%= f.text_field :ime, :class => 'form-control'%>
+    </div>
+    <div id="red">
+      Вид:&nbsp;
+      <%= f.text_field :vid, :class => 'form-control' %>
+    </div>
+    <div id="red">
+      Тип:&nbsp;
+      <%= f.text_field :tip, :class => 'form-control' %>
+    </div>
+    <div id="red">
+      Сорта:&nbsp;
+      <%= f.text_field :sorta, :class => 'form-control' %>
+    </div>
+    <div id="red">
+      Боја:&nbsp;
+      <%= f.text_field :boja, :class => 'form-control'%>
+    </div>
+    <div id="red">
+      Слика:&nbsp;
+      <%= f.text_field :slika, :class => 'form-control' %>
+    </div>
+    <div id="red">
+      Винарија:&nbsp;
+      <!--postavi soodvetna selektirana vinarija na koja sto pripagja-->
+      <%= f.collection_select(:vinarija_id, @vinarii, :id, :ime)%>
+    </div>
+    <div id="red">
+      <%= button_tag(:type => 'submit', :class => "btn btn-success") do %>
+          <span class='glyphicon glyphicon-ok'></span> Update
+      <% end %>
+      <%= link_to raw("<span class='glyphicon glyphicon-remove'></span> Delete"), vino_delete_path(:id => @vino.id), :class => 'btn btn-danger pull-right' %>
+    </div>
+<% end %>

@@ -1,4 +1,4 @@
-class DetaliController < ApplicationController
+class DetalisController < ApplicationController
   def index
   end
 

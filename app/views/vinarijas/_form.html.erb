@@ -1,0 +1,37 @@
+  <%= form_for(@vinarija) do |f| %>
+          <div id="red">
+            Име:&nbsp;
+            <%= f.text_field :ime, :class => 'form-control'%>
+          </div>
+          <div id="red">
+            Регион:&nbsp;
+            <%= f.text_field :region, :class => 'form-control' %>
+          </div>
+          <div id="red">
+            Град:&nbsp;
+            <%= f.text_field :grad, :class => 'form-control' %>
+          </div>
+          <div id="red">
+            Година на основање:&nbsp;
+            <%= f.text_field :godina, :class => 'form-control' %>
+          </div>
+          <div id="red">
+            Опис:&nbsp;
+            <%= f.text_field :opis, :class => 'form-control'%>
+          </div>
+          <div id="red">
+            Веб страна:&nbsp;
+            <%= f.text_field :veb_strana, :class => 'form-control'%>
+          </div>
+          <div id="red">
+            Слика:&nbsp;
+            <%= f.text_field :slika, :class => 'form-control' %>
+          </div>
+      <div id="red">
+        <%= button_tag(:type => 'submit', :class => 'btn btn-primary pull-right') do %>
+            <span class="glyphicon glyphicon-plus"></span> Add
+        <% end %>
+      </div>
+  <% end %>
+
+
