@@ -4,5 +4,4 @@ class AdministratorController < ApplicationController
     @vinarijas = Vinarija.all.order('ime ASC')
     @vinos = Vino.all.order('ime ASC')
   end
-
 end

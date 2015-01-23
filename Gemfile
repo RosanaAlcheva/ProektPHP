@@ -41,3 +41,9 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin]
 #BOOTSTRAP GEM
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
+
+# DEVISE gem for authentication
+gem 'devise', '3.4.1'
+
+gem "formtastic"
+gem 'activeadmin', github: 'activeadmin'

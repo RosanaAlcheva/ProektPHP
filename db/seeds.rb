@@ -21,6 +21,7 @@ v9 = Vinarija.create(ime: 'Popova Kula', region: 'Demir Kapija', grad: 'Demir Ka
 vino1 = Vino.create(ime: 'Vranec', vid: 'suvo', tip: 'klasik', sorta: 'Vranec', boja: 'crveno', slika: '/', vinarija_id: v2.id)
 vino2 = Vino.create(ime: 'Tga za jug', vid: 'polusuvo', tip: 'tradicionalno', sorta: 'Vranec', boja: 'crveno', slika: '/', vinarija_id: v1.id)
 
+
 #sluzenje
 s1 = Sluzenje.create(temperatura_max: "18" ,temperatura_min: "16", slika_chasa: "casaCrveno.png", vino_id: vino1.id)
 
