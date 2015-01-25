@@ -22,7 +22,6 @@ ActiveAdmin.register Sluzenje do
       f.input :temperatura_max
       f.input :temperatura_min
       f.input :slika_chasa
-
     end
     f.actions
   end

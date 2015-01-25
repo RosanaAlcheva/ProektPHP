@@ -3,4 +3,10 @@
   <data-source name="Rails ProektPHP: development" uuid="da2d96c6-7de6-44f6-bf14-65c2e4e2d6a5">
     <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
   </data-source>
+  <data-source name="Rails ProektPHP: test" uuid="dd3cfd71-ccf4-4c52-b721-cb07dc56dac2">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source name="Rails ProektPHP: production" uuid="02c0757b-6d97-404b-8308-885bbd1ab127">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
 </component>

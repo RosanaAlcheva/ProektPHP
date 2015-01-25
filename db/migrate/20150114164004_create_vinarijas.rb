@@ -1,7 +1,6 @@
 class CreateVinarijas < ActiveRecord::Migration
   def change
     create_table :vinarijas do |t|
-      #t.integer :id IMPLICITNO SE DODAVA
       t.string :ime
       t.string :region
       t.string :grad

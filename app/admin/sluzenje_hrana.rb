@@ -1,4 +1,4 @@
-ActiveAdmin.register Hrana do
+ActiveAdmin.register SluzenjeHrana do
 
 
   # See permitted parameters documentation:
@@ -14,12 +14,12 @@ ActiveAdmin.register Hrana do
   #   permitted
   # end
 
-  permit_params :ime, :slika
+  permit_params :sluzenje_id, :hrana_id
 
   form do |f|
-    f.inputs "Hrana" do
-      f.input :ime
-      f.input :slika
+    f.inputs "Sluzenje-Hrana" do
+      f.input :sluzenje, :collection => Sluzenje.all.map{ |sluzenje| [sluzenje.id, sluzenje.id]}
+      f.input :hrana, :collection => Hrana.all.map{ |hrana| [hrana.ime, hrana.id]}
     end
     f.actions
   end

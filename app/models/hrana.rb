@@ -1,3 +1,4 @@
 class Hrana < ActiveRecord::Base
- belongs_to :sluzenje
+ has_many :sluzenje_hranas
+ has_many :sluzenjes, through: :sluzenje_hranas
 end
