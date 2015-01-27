@@ -14,6 +14,7 @@ class KomentarisController < ApplicationController
   end
   def create
     @komentar = Komentari.new(komentari_param)
+    @komentar.ime = "Анонимен" if @komentar.ime.length <= 1
     @komentar.vreme = Time.now
     if @komentar.save
       redirect_to('/komentaris/new')
