@@ -1,6 +1,6 @@
 class CreateVinarijas < ActiveRecord::Migration
 
-  def up
+  def change
     create_table :vinarijas do |t|
       t.string :ime
       t.string :region
@@ -13,7 +13,4 @@ class CreateVinarijas < ActiveRecord::Migration
     end
   end
 
-  def down
-    drop_table :vinarijas
-  end
 end

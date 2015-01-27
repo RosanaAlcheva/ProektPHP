@@ -1,11 +1,8 @@
 Rails.application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
-  #devise_for :admins
 
   get '/' => 'application#index'
-
-  #get 'admin' => 'administrator#index'
 
   resources :vinarijas
   get 'vinarijas/:id/delete' => 'vinarijas#delete', :as => :vinarija_delete

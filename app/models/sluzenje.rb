@@ -14,5 +14,5 @@ class Sluzenje < ActiveRecord::Base
                               :less_than_or_equal_to => 30,
                               :too_short => 'Многу е кратко за температура! / Too short for temperature!',
                               :too_long => 'Многу е долго за температура! / Too long for a temperature!',
-                              :message => "Температурате не е во опсег! / Temperature out of range!"
+                              :message => "Температурата не е во опсег! / Temperature out of range!"
 end

@@ -14,6 +14,8 @@ ActiveAdmin.register Sluzenje do
   #   permitted
   # end
 
+  glasses = ["casaBelo.png", "casaCrveno.png", "casaRoze.png", "casaSampanj.png"]
+
   permit_params :vino_id, :temperatura_max, :temperatura_min, :slika_chasa
 
   form do |f|
@@ -21,7 +23,7 @@ ActiveAdmin.register Sluzenje do
       f.input :vino, :collection => Vino.all.map{ |vino| [vino.ime, vino.id]}
       f.input :temperatura_max
       f.input :temperatura_min
-      f.input :slika_chasa
+      f.input :slika_chasa, :collection => glasses.map{ |casa| [casa,casa]}
     end
     f.actions
   end

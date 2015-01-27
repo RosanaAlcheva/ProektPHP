@@ -52,3 +52,4 @@ gem 'devise', '3.4.1'
 
 gem "formtastic"
 gem 'activeadmin', github: 'activeadmin'
+gem 'paperclip'

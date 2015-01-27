@@ -1,7 +1,6 @@
 class Vinarija < ActiveRecord::Base
-
-
   has_many :vinos
+
   validates_presence_of :ime, :region, :grad, :godina, :opis, :veb_strana, :slika
   validates_length_of :ime,
                       :minimum => 1,           # more than 1 characters

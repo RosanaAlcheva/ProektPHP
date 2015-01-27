@@ -76,11 +76,13 @@ ActiveRecord::Schema.define(version: 20150125165454) do
 
   create_table "sluzenje_hranas", force: true do |t|
     t.integer  "sluzenje_id"
-    t.integer  "true_id"
     t.integer  "hrana_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "sluzenje_hranas", ["hrana_id"], name: "index_sluzenje_hranas_on_hrana_id", using: :btree
+  add_index "sluzenje_hranas", ["sluzenje_id"], name: "index_sluzenje_hranas_on_sluzenje_id", using: :btree
 
   create_table "sluzenjes", force: true do |t|
     t.integer  "temperatura_max"

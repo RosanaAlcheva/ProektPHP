@@ -1,0 +1,16 @@
+<%= form_for @hranas, :html => {:id => "hrana_form", :novalidate => true} do |f| %>
+    <table>
+      <tr>
+        <td>Ime</td>
+        <td><%= f.text_field :ime%></td>
+      </tr>
+      <tr>
+        <td>Slika</td>
+        <td><%= f.text_field :slika%></td>
+      </tr>
+    </table>
+    <%= f.actions do %>
+        <%= f.action :submit %>
+        <li class="cancel"><%= link_to "Cancel", @hranas %></li>
+    <% end %>
+<% end %>

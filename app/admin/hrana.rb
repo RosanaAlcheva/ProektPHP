@@ -14,6 +14,7 @@ ActiveAdmin.register Hrana do
   #   permitted
   # end
 
+
   permit_params :ime, :slika
 
   form do |f|
@@ -23,5 +24,6 @@ ActiveAdmin.register Hrana do
     end
     f.actions
   end
+
 
 end
