@@ -42,13 +42,13 @@ vino_bovin_1 = Vino.create(ime: 'Венус', vid: 'суво', tip: 'Квали�
 vino_bovin_2 = Vino.create(ime: 'Император', vid: 'суво', tip: 'Квалитетни вина', sorta: 'Вранец', boja: 'црвено', slika: 'Imperator.gif', vinarija_id: v6.id)
 vino_bovin_3 = Vino.create(ime: 'Симфони', vid: 'суво', tip: 'Квалитетни вина', sorta: 'Шардоне, Ризлинг, Сувињон', boja: 'бело', slika: 'Symphony.gif', vinarija_id: v6.id)
 #Vinarija Popov
-vino_popov_1 = Vino.create(ime: 'Розе Пинот Ноар', vid: 'суво', tip: '/', sorta: 'Пинот ноар, Станушина', boja: 'розе', slika: 'roze_popov.jpg', vinarija_id: v7.id)
-vino_popov_2 = Vino.create(ime: 'Жилавка', vid: 'суво', tip: '/', sorta: 'Жилавка', boja: 'бело', slika: 'zilavka.jpg', vinarija_id: v7.id)
-vino_popov_3 = Vino.create(ime: 'Мерлот', vid: 'суво', tip: '/', sorta: 'Мерло', boja: 'црвено', slika: 'merlot_popov.jpg', vinarija_id: v7.id)
+vino_popov_1 = Vino.create(ime: 'Розе Пинот Ноар', vid: 'суво', tip: '/', sorta: 'Пинот ноар, Станушина', boja: 'розе', slika: 'roze_popov.png', vinarija_id: v7.id)
+vino_popov_2 = Vino.create(ime: 'Жилавка', vid: 'суво', tip: '/', sorta: 'Жилавка', boja: 'бело', slika: 'zilavka.png', vinarija_id: v7.id)
+vino_popov_3 = Vino.create(ime: 'Мерлот', vid: 'суво', tip: '/', sorta: 'Мерло', boja: 'црвено', slika: 'merlot_popov.png', vinarija_id: v7.id)
 #Popova Kula
-vino_popovakula_1 = Vino.create(ime: 'Станушина', vid: 'суво', tip: 'Станушина', sorta: 'Станушина', boja: 'розе', slika: 'stanushina.gif', vinarija_id: v8.id)
-vino_popovakula_2 = Vino.create(ime: 'Темјаника', vid: 'полуслатко', tip: 'Класик', sorta: 'Темјаника', boja: 'бело', slika: 'temjanika-popova-kula.gif', vinarija_id: v8.id)
-vino_popovakula_3 = Vino.create(ime: 'Алтан', vid: 'суво', tip: 'Демир Капија', sorta: '70% Совињон Блан, 25% Шардоне, 5% Мускат Отонел', boja: 'бело', slika: 'altan.gif', vinarija_id: v8.id)
+vino_popovakula_1 = Vino.create(ime: 'Станушина', vid: 'суво', tip: 'Станушина', sorta: 'Станушина', boja: 'розе', slika: 'stanushina.png', vinarija_id: v8.id)
+vino_popovakula_2 = Vino.create(ime: 'Темјаника', vid: 'полуслатко', tip: 'Класик', sorta: 'Темјаника', boja: 'бело', slika: 'temjanika-popova-kula.png', vinarija_id: v8.id)
+vino_popovakula_3 = Vino.create(ime: 'Алтан', vid: 'суво', tip: 'Демир Капија', sorta: '70% Совињон Блан, 25% Шардоне, 5% Мускат Отонел', boja: 'бело', slika: 'altan.png', vinarija_id: v8.id)
 
 #SLUZENJE
 #Tikves

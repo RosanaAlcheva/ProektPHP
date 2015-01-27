@@ -10,3 +10,6 @@ class Vino < ActiveRecord::Base
                       :too_long => 'Многу е долго за име! / Too long for a name!'
   validates_uniqueness_of :slika
 end
+
+
+
