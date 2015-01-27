@@ -8,26 +8,34 @@
 
 #vinarii
 #Popova Kula
-v5 = Vinarija.create(ime: 'Сковин', region: 'Скопје', grad: 'Скопје', godina: 1979, opis: 'Вината на Сковин имаат добиено 53 меѓународни награди и признанија за квалитет на многубројни вински саеми и фестивали.', veb_strana: 'http://www.skovin.mk', slika: 'skovin.png')
-v7 = Vinarija.create(ime: 'Bovin', region: 'Negotino', grad: 'Negotino', godina: 1998, opis: 'Mnogu ubava vinarijas', veb_strana: 'http://www.bovin.com.mk/', slika: 'bovin.png')
-v8 = Vinarija.create(ime: 'Vinarija Popov', region: 'Tikveski', grad: 'Kavadarci', godina: 2001, opis: 'Mnogu ubava vinarijas', veb_strana: 'http://www.popovwinery.com.mk/', slika: 'popov.png')
-v9 = Vinarija.create(ime: 'Попова Кула', region: 'Демиркаписки, Велико Брдо', grad: 'Демир Капија', godina: 2005, opis: 'Локално и регионално располагаме со традиционални сорти кои имаат извонредни каректеристики. Виното од нив би можело да им се допадне на потрошувачите ширум светот.', veb_strana: 'http://www.popovakula.com.mk/', slika: 'popova.png')
+v5 = Vinarija.create(ime: 'Сковин', region: 'Скопски', grad: 'Скопје', godina: 1979, opis: 'Вината на Сковин имаат добиено 53 меѓународни награди и признанија за квалитет на многубројни вински саеми и фестивали.', veb_strana: 'http://www.skovin.mk', slika: 'skovin.png')
+v6 = Vinarija.create(ime: 'Бовин', region: 'Тиквешки', grad: 'Неготино', godina: 1998, opis: '', veb_strana: 'http://www.bovin.com.mk/', slika: 'bovin.png')
+v7 = Vinarija.create(ime: 'Vinarija Popov', region: 'Тиквешки', grad: 'Kavadarci', godina: 2001, opis: '', veb_strana: 'http://www.popovwinery.com.mk/', slika: 'popov.png')
+v8 = Vinarija.create(ime: 'Попова Кула', region: 'Демиркаписки, Велико Брдо', grad: 'Демир Капија', godina: 2005, opis: 'Локално и регионално располагаме со традиционални сорти кои имаат извонредни каректеристики. Виното од нив би можело да им се допадне на потрошувачите ширум светот.', veb_strana: 'http://www.popovakula.com.mk/', slika: 'popova.png')
 
 #vina
 #Skovin
-vino_skovin_1 = Vino.create(ime: 'Sun City Rose', vid: 'суво', tip: 'Sun City', sorta: 'Каберне Совињон', boja: 'розе', slika: 'sun-city-rose.png', vinarija_id: v5.id)
+vino_skovin_1 = Vino.create(ime: 'Sun City Rose', vid: 'суво', tip: 'Sun City', sorta: 'Каберне Совињон, Вранец', boja: 'розе', slika: 'sun-city-rose.png', vinarija_id: v5.id)
 vino_skovin_2 = Vino.create(ime: 'Кале', vid: 'суво', tip: 'Фина Селекција', sorta: 'Каберне Сувињон', boja: 'црвено', slika: 'kale.png', vinarija_id: v5.id)
 vino_skovin_3 = Vino.create(ime: 'Мускат', vid: 'полусуво', tip: 'Класик', sorta: 'Мускат', boja: 'бело', slika: 'muskat.png', vinarija_id: v5.id)
+#Bovin
+vino_bovin_1 = Vino.create(ime: 'Венус', vid: 'суво', tip: 'Квалитетни вина', sorta: 'Вранец, Мерлот', boja: 'црвена', slika: 'Venus.gif', vinarija_id: v6.id)
+vino_bovin_2 = Vino.create(ime: 'Император', vid: 'суво', tip: 'Квалитетни вина', sorta: 'Вранец', boja: 'црвено', slika: 'Imperator.gif', vinarija_id: v6.id)
+vino_bovin_3 = Vino.create(ime: 'Симфони', vid: 'суво', tip: 'Квалитетни вина', sorta: 'Шардоне, Ризлинг, Сувињон', boja: 'бело', slika: 'Symphony.gif', vinarija_id: v6.id)
 #Popova Kula
-vino_popovakula_1 = Vino.create(ime: 'Станушина', vid: 'суво', tip: 'Станушина', sorta: 'Станушина', boja: 'розе', slika: 'stanushina.gif', vinarija_id: v9.id)
-vino_popovakula_2 = Vino.create(ime: 'Темјаника', vid: 'полуслатко', tip: 'Класик', sorta: 'Темјаника', boja: 'бело', slika: 'temjanika-popova-kula.gif', vinarija_id: v9.id)
-vino_popovakula_3 = Vino.create(ime: 'Алтан', vid: 'суво', tip: 'Демир Капија', sorta: '70% Совињон Блан, 25% Шардоне, 5% Мускат Отонел', boja: 'бело', slika: 'altan.gif', vinarija_id: v9.id)
+vino_popovakula_1 = Vino.create(ime: 'Станушина', vid: 'суво', tip: 'Станушина', sorta: 'Станушина', boja: 'розе', slika: 'stanushina.gif', vinarija_id: v8.id)
+vino_popovakula_2 = Vino.create(ime: 'Темјаника', vid: 'полуслатко', tip: 'Класик', sorta: 'Темјаника', boja: 'бело', slika: 'temjanika-popova-kula.gif', vinarija_id: v8.id)
+vino_popovakula_3 = Vino.create(ime: 'Алтан', vid: 'суво', tip: 'Демир Капија', sorta: '70% Совињон Блан, 25% Шардоне, 5% Мускат Отонел', boja: 'бело', slika: 'altan.gif', vinarija_id: v8.id)
 
 #sluzenje
 #Skovin
 sluzenje_skovin_1 = Sluzenje.create(temperatura_max: "12" ,temperatura_min: "8", slika_chasa: "casaRoze.png", vino_id: vino_skovin_1.id)
 sluzenje_skovin_2 = Sluzenje.create(temperatura_max: "18" ,temperatura_min: "16", slika_chasa: "casaCrveno.png", vino_id: vino_skovin_2.id)
 sluzenje_skovin_3 = Sluzenje.create(temperatura_max: "12" ,temperatura_min: "8", slika_chasa: "casaBelo.png", vino_id: vino_skovin_3.id)
+#Bovin
+sluzenje_bovin_1 = Sluzenje.create(temperatura_max: "17" ,temperatura_min: "15", slika_chasa: "casaCrveno.png", vino_id: vino_bovin_1.id)
+sluzenje_bovin_2 = Sluzenje.create(temperatura_max: "17" ,temperatura_min: "15", slika_chasa: "casaCrveno.png", vino_id: vino_bovin_2.id)
+sluzenje_bovin_3 = Sluzenje.create(temperatura_max: "10" ,temperatura_min: "8", slika_chasa: "casaBelo.png", vino_id: vino_bovin_3.id)
 #Popova Kula
 sluzenje_popkula_1 = Sluzenje.create(temperatura_max: "16" ,temperatura_min: "12", slika_chasa: "casaRoze.png", vino_id: vino_popovakula_1.id)
 sluzenje_popkula_2 = Sluzenje.create(temperatura_max: "12" ,temperatura_min: "12", slika_chasa: "casaBelo.png", vino_id: vino_popovakula_2.id)
@@ -52,6 +60,14 @@ SluzenjeHrana.create({sluzenje_id: sluzenje_skovin_1.id, hrana_id: hrana_cheese.
 SluzenjeHrana.create({sluzenje_id: sluzenje_skovin_1.id, hrana_id: hrana_vegetable.id})
 SluzenjeHrana.create({sluzenje_id: sluzenje_skovin_2.id, hrana_id: hrana_meat.id})
 SluzenjeHrana.create({sluzenje_id: sluzenje_skovin_3.id, hrana_id: hrana_desert.id})
+#Bovin
+SluzenjeHrana.create({sluzenje_id: sluzenje_bovin_1.id, hrana_id: hrana_fish.id})
+SluzenjeHrana.create({sluzenje_id: sluzenje_bovin_1.id, hrana_id: hrana_meat.id})
+SluzenjeHrana.create({sluzenje_id: sluzenje_bovin_2.id, hrana_id: hrana_meat.id})
+SluzenjeHrana.create({sluzenje_id: sluzenje_bovin_2.id, hrana_id: hrana_cheese.id})
+SluzenjeHrana.create({sluzenje_id: sluzenje_bovin_3.id, hrana_id: hrana_cheese.id})
+SluzenjeHrana.create({sluzenje_id: sluzenje_bovin_3.id, hrana_id: hrana_meat.id})
+SluzenjeHrana.create({sluzenje_id: sluzenje_bovin_3.id, hrana_id: hrana_seafood.id})
 #Popova Kula
 SluzenjeHrana.create({sluzenje_id: sluzenje_popkula_1.id, hrana_id: hrana_fruit.id})
 SluzenjeHrana.create({sluzenje_id: sluzenje_popkula_2.id, hrana_id: hrana_desert.id})
