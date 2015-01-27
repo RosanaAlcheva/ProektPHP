@@ -27,17 +27,6 @@
           color: #CC0000;
       }
 
-      .bottle_class{
-          max-width: 350px;
-          max-height: 350px
-      }
-      @media screen and (max-width: 750px){
-          .bottle_class{
-              max-width: 200px;
-              max-height: 200px;
-          }
-      }
-
       /*brisenje na liniite megju redovite vo tabelata*/
       .table>tbody>tr>th, .table>tbody>tr>td {
           border-top: none;
@@ -58,6 +47,7 @@
           font-size: 14px;
       }
   </style>
+
 
 </head>
 <body>
@@ -82,7 +72,7 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
             <li class="dropdown">
-              <a id="vizbi" name="vizbi" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class=""></span>Винарии<span class="caret"></span></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class=""></span>Винарии<span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
                 <% @vinarijas.each do |vinarija| %>
                     <li><span class="glyphicon glyphicon-home"></span>&nbsp;<span class="h4"><%= link_to vinarija.ime, vinarija_path(vinarija, :query => vinarija.ime), :id => "#{vinarija.ime}", :name => "#{vinarija.ime}", :onclick => "chgName('#{vinarija.ime}')" %></span></li>
@@ -97,23 +87,29 @@
     </nav>
   </div>
 
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+
   <div class="row">
-    <div class="col-lg-3" style="max-width: 200px; max-height: 200px">
-    <%= image_tag("/images/komentar.png}", :class => 'img-rounded') %>
-  </div>
-    <div class="col-lg-6">
-      <%= render 'form' %>
+    <div class="col-lg-3 text-center" style="left: 35%">
+     <p style="color: black;font-weight: 500;font-size:18px">Дали сакате да го избришете коментарот?</p>
+      <%= link_to raw("<span class='glyphicon glyphicon-ok'></span> Да"), komentari_path, :class => 'btn btn-success pull-left', :method => 'delete' %>
+      <%= link_to raw("<span class='glyphicon glyphicon-remove'></span> Не"), edit_komentari_path(:id => @komentar.id), :class => 'btn btn-danger pull-right' %>
     </div>
   </div>
 
-  <div class="row">
-    <% @komentaris.each do |komentar| %>
-        <%= komentar.sodrzina %>
-        - <%= komentar.ime %> on <%= kometar.vreme %>
-    <% end %>
-  </div>
-
-
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
 
   <div id="footer" class="row" style="background-color: #F7F7F7">
     <footer>

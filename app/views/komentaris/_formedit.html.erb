@@ -1,0 +1,16 @@
+<%= form_for(@komentar) do |f| %>
+    <div id="red">
+      Име:&nbsp;
+      <%= f.text_field :ime, :class => 'form-control'%>
+    </div>
+    <div id="red">
+      Коментар:&nbsp;
+      <%= f.text_area :sodrzina, :class => 'form-control', :cols => '3', :rows => '7' %>
+    </div>
+    <div class="actions">
+      <%= button_tag(:type => 'submit', :class => "btn btn-success") do %>
+          <span class='glyphicon glyphicon-ok'></span> Измени
+      <% end %>
+      <%= link_to raw("<span class='glyphicon glyphicon-remove'></span> Избриши"), komentari_delete_path(:id => @komentar.id), :class => 'btn btn-danger' %>
+    </div>
+<% end %>
