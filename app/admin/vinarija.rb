@@ -16,4 +16,17 @@ ActiveAdmin.register Vinarija do
 
   permit_params :ime, :region, :grad, :godina, :opis, :veb_strana, :slika
 
+  form do |f|
+    f.inputs "Vinarija"  do
+      f.input :ime
+      f.input :region
+      f.input :grad
+      f.input :godina
+      f.input :opis
+      f.input :veb_strana
+      f.input :slika
+    end
+      f.actions
+  end
+
 end
