@@ -7,22 +7,23 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 #vinarii
-v1 = Vinarija.create(ime: 'Tikves', region: 'Tikveski', grad: 'Kavadarci', godina: 1885, opis: 'Mnogu ubava vinarijas', veb_strana: 'http://tikves.com.mk', slika: 'tikves.png')
-v2 = Vinarija.create(ime: 'Stobi', region: 'Gradsko', grad: 'Gradsko', godina: 1885, opis: 'Mnogu ubava vinarijas', veb_strana: 'http://www.stobiwinery.mk', slika: 'stobi.png')
-v3 = Vinarija.create(ime: 'Imako Vino', region: 'Stip', grad: 'Stip', godina: 2002, opis: 'Mnogu ubava vinarijas', veb_strana: 'http://imakovino.com.mk', slika: 'imako2.png')
-v4 = Vinarija.create(ime: 'Valandovo', region: 'Valandovo', grad: 'Valandovo', godina: 1948, opis: 'Mnogu ubava vinarijas', veb_strana: 'http://www.vizbavalandovo.com.mk', slika: 'valandovo.png')
+#Popova Kula
 v5 = Vinarija.create(ime: 'Skovin', region: 'Skopje', grad: 'Skopje', godina: 1979, opis: 'Mnogu ubava vinarijas', veb_strana: 'http://www.skovin.mk', slika: 'skovin.png')
 v7 = Vinarija.create(ime: 'Bovin', region: 'Negotino', grad: 'Negotino', godina: 1998, opis: 'Mnogu ubava vinarijas', veb_strana: 'http://www.bovin.com.mk/', slika: 'bovin.png')
 v8 = Vinarija.create(ime: 'Vinarija Popov', region: 'Tikveski', grad: 'Kavadarci', godina: 2001, opis: 'Mnogu ubava vinarijas', veb_strana: 'http://www.popovwinery.com.mk/', slika: 'popov.png')
-v9 = Vinarija.create(ime: 'Popova Kula', region: 'Demir Kapija', grad: 'Demir Kapija', godina: 2005, opis: 'Mnogu ubava vinarijas', veb_strana: 'http://www.popovakula.com.mk/', slika: 'popova.png')
+v9 = Vinarija.create(ime: 'Popova Kula', region: 'Demir Kapija', grad: 'Demir Kapija', godina: 2005, opis: 'Локално и регионално располагаме со традиционални сорти кои имаат извонредни каректеристики. Виното од нив би можело да им се допадне на потрошувачите ширум светот.', veb_strana: 'http://www.popovakula.com.mk/', slika: 'popova.png')
 
 #vina
-vino1 = Vino.create(ime: 'Vranec', vid: 'suvo', tip: 'klasik', sorta: 'Vranec', boja: 'crveno', slika: '/', vinarija_id: v2.id)
-vino2 = Vino.create(ime: 'Tga za jug', vid: 'polusuvo', tip: 'tradicionalno', sorta: 'Vranec', boja: 'crveno', slika: '/', vinarija_id: v1.id)
+#Popova Kula
+vino_popovakula_1 = Vino.create(ime: 'Станушина', vid: 'суво', tip: 'Станушина', sorta: 'Станушина', boja: 'розе', slika: 'stanushina.gif', vinarija_id: v9.id)
+vino_popovakula_2 = Vino.create(ime: 'Темјаника', vid: 'полуслатко', tip: 'Класик', sorta: 'Темјаника', boja: 'бело', slika: 'temjanika-popova-kula.gif', vinarija_id: v9.id)
+vino_popovakula_3 = Vino.create(ime: 'Алтан', vid: 'суво', tip: 'Демир Капија', sorta: '70% Совињон Блан, 25% Шардоне, 5% Мускат Отонел', boja: 'бело', slika: 'altan.gif', vinarija_id: v9.id)
 
 #sluzenje
-s1 = Sluzenje.create(temperatura_max: "18" ,temperatura_min: "16", slika_chasa: "casaCrveno.png", vino_id: vino1.id)
-s2 = Sluzenje.create(temperatura_max: "18" ,temperatura_min: "16", slika_chasa: "casaCrveno.png", vino_id: vino2.id)
+#Popova Kula
+sluzenje_popkula_1 = Sluzenje.create(temperatura_max: "16" ,temperatura_min: "12", slika_chasa: "casaRoze.png", vino_id: vino_popovakula_1.id)
+sluzenje_popkula_2 = Sluzenje.create(temperatura_max: "12" ,temperatura_min: "12", slika_chasa: "casaBelo.png", vino_id: vino_popovakula_2.id)
+sluzenje_popkula_3 = Sluzenje.create(temperatura_max: "10" ,temperatura_min: "8", slika_chasa: "casaBelo.png", vino_id: vino_popovakula_3.id)
 
 #hrana
 hrana_cheese = Hrana.create(ime: "Sirenje" , slika: "cheese.jpg")
@@ -36,7 +37,11 @@ hrana_seafood = Hrana.create(ime: "Morska hrana" , slika: "seafood.jpg")
 hrana_vegetable = Hrana.create(ime: "Zelencuk" , slika: "vegetable.jpg")
 
 #join table Sluzenje_Hrana
-SluzenjeHrana.create({sluzenje_id: s1.id, hrana_id: hrana_cheese.id})
-SluzenjeHrana.create({sluzenje_id: s1.id, hrana_id: hrana_meat.id})
-SluzenjeHrana.create({sluzenje_id: s2.id, hrana_id: hrana_cheese.id})
-SluzenjeHrana.create({sluzenje_id: s2.id, hrana_id: hrana_meat.id})
+#Popova Kula
+SluzenjeHrana.create({sluzenje_id: sluzenje_popkula_1.id, hrana_id: hrana_fruit.id})
+SluzenjeHrana.create({sluzenje_id: sluzenje_popkula_2.id, hrana_id: hrana_desert.id})
+SluzenjeHrana.create({sluzenje_id: sluzenje_popkula_2.id, hrana_id: hrana_desert.id})
+SluzenjeHrana.create({sluzenje_id: sluzenje_popkula_3.id, hrana_id: hrana_cheese.id})
+SluzenjeHrana.create({sluzenje_id: sluzenje_popkula_3.id, hrana_id: hrana_chicken.id})
+SluzenjeHrana.create({sluzenje_id: sluzenje_popkula_3.id, hrana_id: hrana_fish.id})
+SluzenjeHrana.create({sluzenje_id: sluzenje_popkula_3.id, hrana_id: hrana_desert.id})
