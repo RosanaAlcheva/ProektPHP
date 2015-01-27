@@ -42,8 +42,8 @@
           }
           @media screen and (max-width: 1170px){
               .bottle_class{
-                  max-width: 200px;
-                  max-height: 200px;
+                  max-width: 350px;
+                  max-height: 350px;
               }
           }
 
@@ -120,13 +120,13 @@
       </div>
     </div>
     <div class="col-lg-9">
-      <div class="row">
-        <div class="col-lg-2 col-md-4">
-          <%= image_tag("/images/vina/#{@vino.slika}", :class => 'img-rounded pull-right bottle_class') %>
+      <div class="col-lg-12">
+        <div class="col-lg-1 col-md-12 col-sm-12" style="z-index: 1">
+          <%= image_tag("/images/vina/#{@vino.slika}", :class => 'img-rounded bottle_class') %>
         </div>
 
-        <div class="col-lg-3">
-          <div class="col-lg-12">
+        <div class="col-lg-4 col-md-12 col-sm-12">
+          <div class="col-lg-12 col-md-12 col-sm-12">
           <div class="panel panel-info">
             <div class="panel-heading">
               <h3 class="panel-title">Карактеристики:</h3>
@@ -142,7 +142,8 @@
         </div>
         </div>
 
-        <div class="col-lg-7">
+
+        <div class="col-lg-7 col-md-12 col-sm-12">
           <div class="row">
             <div class="col-lg-5">
               <div class="thumbnail">
