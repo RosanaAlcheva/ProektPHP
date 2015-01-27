@@ -72,15 +72,9 @@
           </ul>
         </li>
       </ul>
-      <form class="navbar-form navbar-right" role="search">
-        <div class="input-group">
-          <input type="text" class="form-control" placeholder="Пребарај вино...">
-            <span class="input-group-btn">
-              <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
-            </span>
-        </div>
-
-      </form>
+      <ul class="nav navbar-nav navbar-right">
+        <li><%= link_to raw("<span class='glyphicon glyphicon-pencil'></span> Оставете коментар"), komentaris_path %></li>
+      </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>

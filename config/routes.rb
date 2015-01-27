@@ -4,6 +4,10 @@ Rails.application.routes.draw do
 
   get '/' => 'application#index'
 
+  resources :komentaris
+  get 'komentaris/:id/delete' => 'komentaris#delete', :as => :komentari_delete
+
+
   resources :vinarijas
   get 'vinarijas/:id/delete' => 'vinarijas#delete', :as => :vinarija_delete
 
