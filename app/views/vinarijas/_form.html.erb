@@ -1,7 +1,7 @@
-  <%= form_for(@vinarija) do |f| %>
+  <%= form_for @vinarija, :validate => true do |f| %>
           <div id="red">
             Име:&nbsp;
-            <%= f.text_field :ime, :class => 'form-control'%>
+            <%= f.text_field :ime, :class => 'form-control' %>
           </div>
           <div id="red">
             Регион:&nbsp;
@@ -13,7 +13,7 @@
           </div>
           <div id="red">
             Година на основање:&nbsp;
-            <%= f.text_field :godina, :class => 'form-control' %>
+            <%= f.number :godina, :class => 'form-control' %>
           </div>
           <div id="red">
             Опис:&nbsp;
@@ -21,13 +21,13 @@
           </div>
           <div id="red">
             Веб страна:&nbsp;
-            <%= f.text_field :veb_strana, :class => 'form-control'%>
+            <%= f.url_field :veb_strana, :class => 'form-control'%>
           </div>
           <div id="red">
             Слика:&nbsp;
             <%= f.text_field :slika, :class => 'form-control' %>
           </div>
-      <div id="red">
+      <div id="red" aria-disabled="true">
         <%= button_tag(:type => 'submit', :class => 'btn btn-primary pull-right') do %>
             <span class="glyphicon glyphicon-plus"></span> Add
         <% end %>
