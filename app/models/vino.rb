@@ -8,5 +8,5 @@ class Vino < ActiveRecord::Base
                       :in => 1..30,            # between 1 and 30 characters
                       :too_short => 'Многу е кратко за име! / Too short for name!',
                       :too_long => 'Многу е долго за име! / Too long for a name!'
-  validates_uniqueness_of :ime, :slika
+  validates_uniqueness_of :slika
 end
