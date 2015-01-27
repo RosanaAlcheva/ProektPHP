@@ -86,15 +86,15 @@ sluzenje_popkula_3 = Sluzenje.create(temperatura_max: "10" ,temperatura_min: "8"
 
 
 #HRANA
-hrana_cheese = Hrana.create(ime: "Sirenje" , slika: "cheese.jpg")
-hrana_chicken = Hrana.create(ime: "Pilesko meso" , slika: "chicken.jpg")
-hrana_desert = Hrana.create(ime: "Desert" , slika: "desert.jpg")
-hrana_fish = Hrana.create(ime: "Riba" , slika: "fish.jpg")
-hrana_fruit = Hrana.create(ime: "Obosje" , slika: "fruit.jpg")
-hrana_meat = Hrana.create(ime: "Meso" , slika: "meat.jpg")
-hrana_pasta = Hrana.create(ime: "Testenini" , slika: "pasta.jpg")
-hrana_seafood = Hrana.create(ime: "Morska hrana" , slika: "seafood.jpg")
-hrana_vegetable = Hrana.create(ime: "Zelencuk" , slika: "vegetable.jpg")
+hrana_cheese = Hrana.create(ime: "Сирење" , slika: "cheese.jpg")
+hrana_chicken = Hrana.create(ime: "Пилешко месо" , slika: "chicken.jpg")
+hrana_desert = Hrana.create(ime: "Десерт" , slika: "desert.jpg")
+hrana_fish = Hrana.create(ime: "Риба" , slika: "fish.jpg")
+hrana_fruit = Hrana.create(ime: "Овошје" , slika: "fruit.jpg")
+hrana_meat = Hrana.create(ime: "Месо" , slika: "meat.jpg")
+hrana_pasta = Hrana.create(ime: "Тестенини" , slika: "pasta.jpg")
+hrana_seafood = Hrana.create(ime: "Морска храна" , slika: "seafood.jpg")
+hrana_vegetable = Hrana.create(ime: "Зеленчук" , slika: "vegetable.jpg")
 
 #join table Sluzenje_Hrana
 #tikves
