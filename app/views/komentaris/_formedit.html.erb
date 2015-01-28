@@ -1,7 +1,7 @@
 <%= form_for(@komentar) do |f| %>
     <div id="red">
       Име:&nbsp;
-      <%= f.text_field :ime, :class => 'form-control'%>
+      <%= f.text_field :ime_korisnik, :class => 'form-control'%>
     </div>
     <div id="red">
       Коментар:&nbsp;
@@ -12,5 +12,6 @@
           <span class='glyphicon glyphicon-ok'></span> Измени
       <% end %>
       <%= link_to raw("<span class='glyphicon glyphicon-remove'></span> Избриши"), komentari_delete_path(:id => @komentar.id), :class => 'btn btn-danger' %>
+      <%= link_to raw("<span class='glyphicon glyphicon-arrow-left'></span> Назад"), new_komentari_path, :class => 'btn btn-warning pull-right' %>
     </div>
 <% end %>

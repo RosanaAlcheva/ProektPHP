@@ -1,6 +1,6 @@
 class Komentari < ActiveRecord::Base
-  validates_presence_of :ime, :sodrzina, :vreme
-  validates_length_of :ime,
+  validates_presence_of :ime_korisnik, :sodrzina, :vreme
+  validates_length_of :ime_korisnik,
                       :minimum => 1,           # more than 1 characters
                       :maximum => 30,          # shorter than 30 characters
                       :in => 1..30,            # between 1 and 30 characters

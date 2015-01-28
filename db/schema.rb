@@ -75,7 +75,7 @@ ActiveRecord::Schema.define(version: 20150127173253) do
   end
 
   create_table "komentaris", force: true do |t|
-    t.string   "ime"
+    t.string   "ime_korisnik"
     t.text     "sodrzina"
     t.datetime "vreme"
     t.datetime "created_at"

@@ -111,11 +111,15 @@
           <%= link_to "Измени", edit_komentari_path(komentar.id)%>
         <blockquote>
           <p style="color: black;font-weight: 500"><%= komentar.sodrzina %></p>
-          <small style="color: black;">од <cite><%= komentar.ime %></cite>, <%= komentar.vreme %></small>
+          <small style="color: black;">од <cite><%= komentar.ime_korisnik %></cite>, <%= komentar.vreme %></small>
         </blockquote>
     <% end %>
     </div>
   </div>
+  <br/>
+  <br/>
+
+
 
   <div id="footer" class="row" style="background-color: #F7F7F7">
     <footer>

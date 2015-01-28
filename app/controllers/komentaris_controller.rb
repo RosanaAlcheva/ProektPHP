@@ -14,7 +14,7 @@ class KomentarisController < ApplicationController
   end
   def create
     @komentar = Komentari.new(komentari_param)
-    @komentar.ime = "Анонимен" if @komentar.ime.length <= 1
+    @komentar.ime_korisnik = "Анонимен" if @komentar.ime_korisnik.length <= 1
     @komentar.vreme = Time.now
     if @komentar.save
       redirect_to('/komentaris/new')
@@ -47,6 +47,6 @@ class KomentarisController < ApplicationController
 
   private
   def komentari_param
-    params.require(:komentari).permit(:ime,:sodrzina)
+    params.require(:komentari).permit(:ime_korisnik,:sodrzina)
   end
 end

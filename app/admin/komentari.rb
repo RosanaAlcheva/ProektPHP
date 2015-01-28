@@ -13,6 +13,6 @@ ActiveAdmin.register Komentari do
   #   permitted << :other if resource.something?
   #   permitted
   # end
-  permit_params :ime, :sodrzina, :vreme
+  permit_params :ime_korisnik, :sodrzina, :vreme
 
 end
