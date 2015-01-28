@@ -1,6 +1,6 @@
 class Vino < ActiveRecord::Base
   belongs_to :vinarija
-  #belongs_to :sluzenje #avtomatski kreira one-to-one asocijacija so sluzenje
+
   validates_presence_of :ime, :vid, :tip, :sorta, :boja, :slika, :vinarija
   validates_length_of :ime,
                       :minimum => 1,           # more than 1 characters
