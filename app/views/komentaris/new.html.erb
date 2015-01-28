@@ -55,6 +55,17 @@
           #red{
               margin: 5px;
           }
+          .scrollspy-example {
+              position: relative;
+              height: 200px;
+              margin-top: 10px;
+              overflow: auto;
+              max-width: 40%;
+              left:20%;
+          }
+          blockquote{
+              border-left-color: #CC0000;
+          }
   </style>
 
 </head>
@@ -106,7 +117,8 @@
   <br/>
 
   <div class="row">
-    <div class="col-lg-offset-3 col-lg-6 text-left">
+    <div data-spy="scroll" data-target="#komentari" data-offset="0" class="scrollspy-example">
+    <div id="komentari" class="col-lg-offset-3 col-lg-6 text-left">
     <% @komentaris.each do |komentar| %>
           <%= link_to "Измени", edit_komentari_path(komentar.id)%>
         <blockquote>
@@ -114,6 +126,7 @@
           <small style="color: black;">од <cite><%= komentar.ime_korisnik %></cite>, <%= komentar.vreme %></small>
         </blockquote>
     <% end %>
+    </div>
     </div>
   </div>
   <br/>
