@@ -1,6 +1,7 @@
 class Hrana < ActiveRecord::Base
  has_many :sluzenje_hranas
  has_many :sluzenjes, through: :sluzenje_hranas
+
  validates_presence_of :ime, :slika,
                     :message => "Не смее да биде празно! / Can't be blank!"
  validates_length_of :ime,
